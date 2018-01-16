@@ -44,3 +44,4 @@ This is tutorial of LMPC controller for nonlinear system. In this tutorial basic
 linearize, discretize and how to find solution with simple constraints are shown. We setup out tutorial on simple mathematical pendulum, with equation of motion:
 $$          \frac{\partial x_1}{\partial t} = x_2 $$
 $$          \frac{\partial x_2}{\partial t} = -\frac{g}{l}*sin(x_1) -b*x_2 + u $$
+
