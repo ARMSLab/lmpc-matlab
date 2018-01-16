@@ -56,7 +56,7 @@ $$\frac{\partial x_2}{\partial t} = -\frac{g}{l} sin(x_1) -b*x_2 + u $$
 $$ \min\limits_{ u } J = \frac{1}{2}(X-rr)^TQ(X-rr) + \frac{1}{2}u^TRu = \frac{1}{2}u^TGu + f^Tu + C $$
 
 s.t: 
-$$ A_{con} u \leq B{con}$$ 
+$$ A_{con} u \leq B_{con}$$ 
 
 $$ X = [x(1),x(2),...,x(np)] $$
 
