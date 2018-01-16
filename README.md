@@ -46,6 +46,8 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 This is tutorial of LMPC controller for nonlinear system. In this tutorial basic parts of Linearized MPC controller would be examined. This script shows how to implement controller for nonlinear system provided by equation **dx/dt = f(x,u)** and **y=C*x+D*u**. For details of derivation please refer to  [Zhakatayev, Altay, et al. "Successive linearization based model predictive control of variable stiffness actuated robots." IEEE AIM 2017](http://ieeexplore.ieee.org/document/8014275/)
 
 linearize, discretize and how to find solution with simple constraints are shown. We setup out tutorial on simple mathematical pendulum, with equation of motion:
+
 $$          \frac{\partial x_1}{\partial t} = x_2 $$
-$$          \frac{\partial x_2}{\partial t} = -\frac{g}{l}*sin(x_1) -b*x_2 + u $$
+
+$$          \frac{\partial x_2}{\partial t} = -\frac{g}{l} sin(x_1) -b*x_2 + u $$
 
