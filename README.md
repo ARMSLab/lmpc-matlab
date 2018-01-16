@@ -55,8 +55,11 @@ $$\frac{\partial x_2}{\partial t} = -\frac{g}{l} sin(x_1) -b*x_2 + u $$
  
 $$ \min\limits_{ u } J = \frac{1}{2}(X-rr)^TQ(X-rr) + \frac{1}{2}u^TRu = \frac{1}{2}u^TGu + f^Tu + C $$
 
-s.t: $$ A_{con} u \leq B{con}$$ 
+s.t: 
+$$ A_{con} u \leq B{con}$$ 
 
 $$ X = [x(1),x(2),...,x(np)] $$
 
 $$ x(k+1) = f(x(k),u(k))$$
+
+In order to solve this problem MATLAB built-in quadprog() function is used. Please refer to documentation of quadprog() function for details. In fact, any nonlinear optimization problem solver can be used to come up with a solution. For example, qpOASES is suitable for real-time operation of robotic systems.
