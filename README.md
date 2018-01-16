@@ -35,8 +35,9 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#
+# Tutorial on Linearized MPC controller
 
-#Tutorial on Linearized MPC controller
 
 This is tutorial of LMPC controller for nonlinear system. In this tutorial basic parts of Linearized MPC controller would be examined. This script shows how to implement controller for nonlinear system provided by equation dx/dt = f(x,u) and y=C*x+D*u. For details of derivation please refer to  Zhakatayev, Altay, et al. "Successive linearization based model predictive control of variable stiffness actuated robots." IEEE AIM 2017
 
