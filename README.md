@@ -52,4 +52,4 @@ $$\frac{\partial x_1}{\partial t} = x_2 $$ ,
 $$\frac{\partial x_2}{\partial t} = -\frac{g}{l} sin(x_1) -b*x_2 + u $$
 
  Model Predictive Control scheme can be formulated as an optimization problem with horizon length np:
-$$ Min J = \frac{1}{2}*(X-rr)^T*Q*(X-rr) + \frac{1}{2}u^T*R*u = \frac{1}{2}*u^TG*u + f^T*u + C $$ 
+$$ Min J = \frac{1}{2}(X-rr)^TQ(X-rr) + \frac{1}{2}u^TRu = \frac{1}{2}u^TGu + f^Tu + C $$ 
