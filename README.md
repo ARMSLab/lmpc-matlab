@@ -27,7 +27,7 @@ $$ x(k+1) = f(x(k),u(k))$$
 In order to solve this problem MATLAB built-in quadprog() function is used. Please refer to documentation of quadprog() function for details.
 In fact, any nonlinear optimization problem solver can be used to come up with a solution. For example, qpOASES is suitable for real-time operation of robotic systems.
 
-##Tutorial objectives
+## Tutorial objectives
 This tutorial covers implementation of basic parts of MPC controller. They are:
 1. Linearization of model 
 2. Discretization of linearized model
