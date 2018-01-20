@@ -40,7 +40,8 @@ $$\frac{\partial x_1}{\partial t} = x_2 $$
 $$\frac{\partial x_2}{\partial t} = -\frac{g}{l} sin(x_1) -b*x_2 + u $$
 
 Following MATLAB code shows how do we implement MPC controller:
-`
+
+```
 close all; clear; clc;
 
 % global parameters associated with dynamic model of the system 
@@ -153,6 +154,6 @@ plot(tt ,y(2,:),'b',tt,ref(2,1:(Tfinal/Ts)),'r--');
 subplot(3,1,3)
 plot(tt ,uh);
 
-`
+```
 
 Results
