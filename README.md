@@ -73,7 +73,7 @@ wu = 0.0001;   %penalizing weights of control inputs
 % sampling time (seconds)
 Ts = 0.001;
 % simulation end time (seconds)
-Tfinal = 1;
+Tfinal = 0.5;
 
 % generating simple step reference of the form [0.5 ; 0] 
 ref = 0.5*[ones(1,Tfinal/Ts +np);zeros(1,Tfinal/Ts +np)];
