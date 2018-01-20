@@ -1,7 +1,7 @@
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
 
 # Tutorial on Linearized MPC controller
 
@@ -42,7 +42,8 @@ $$\frac{\partial x_2}{\partial t} = -\frac{g}{l} sin(x_1) -b*x_2 + u $$
 
 Following MATLAB code shows how do we implement MPC controller:
 
-<pre class="prettyprint lang-matlab">
+<pre>
+<code class="matlab">
 close all; clear; clc;
 
 % global parameters associated with dynamic model of the system 
@@ -154,7 +155,7 @@ subplot(3,1,2)
 plot(tt ,y(2,:),'b',tt,ref(2,1:(Tfinal/Ts)),'r--');
 subplot(3,1,3)
 plot(tt ,uh);
-
+</code>
 </pre>
 
 Results
