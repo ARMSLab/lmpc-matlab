@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/assets/scripts/styles/default.css">
-<script src="/assets/scripts/highlight.pack.js"></script>
+<link rel="stylesheet" href="/lmpc-matlab/assets/scripts/styles/default.css">
+<script src="/lmpc-matlab/assets/scripts/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 
