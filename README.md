@@ -14,7 +14,7 @@ MathJax.Hub.Config({
 
 # Tutorial on Linearized MPC controller
 
-This is tutorial of Linearized MPC controller for nonlinear system. In this tutorial basic parts of Linearized MPC controller would be examined. This script shows how to implement controller for nonlinear system provided by equation $\dv{x}{dt} = f(x,u)$ and $y=Cx+Du$. For details of derivation please refer to  Zhakatayev, Altay, et al. "[Successive linearization based model predictive control of variable stiffness actuated robots.](http://ieeexplore.ieee.org/document/8014275/)" IEEE AIM 2017
+This is tutorial of Linearized MPC controller for nonlinear system. In this tutorial basic parts of Linearized MPC controller would be examined. This script shows how to implement controller for nonlinear system provided by equation $\frac{dx}{dt} = f(x,u)$ and $y=Cx+Du$. For details of derivation please refer to  Zhakatayev, Altay, et al. "[Successive linearization based model predictive control of variable stiffness actuated robots.](http://ieeexplore.ieee.org/document/8014275/)" IEEE AIM 2017
 
 ## Problem statement
 MPC controller requires several parameters:
