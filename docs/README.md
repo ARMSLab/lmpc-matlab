@@ -54,7 +54,6 @@ Following MATLAB code shows how do we implement MPC controller:
 <pre>
 <code class="matlab">
 close all; clear; clc;
-
 % global parameters associated with dynamic model of the system 
 global g; g = 9.81;  
 global l; l = 0.1;  
@@ -62,15 +61,12 @@ global b; b = 0.2;
 % this is matrices to represent output as y=C*x+D*u
 C = eye(2);  
 D = [0;0];
-
 %initial point of states
 x = [0.001; 0];
-
 %control input max and min values
 ui=0;
 umax = 80;
 umin =-20;
-
 % IMPORTANT PARAMETERS
 np = 40;       % horizon length 
 nx = 2;        % number of states 
@@ -78,34 +74,24 @@ nu = 1;        % number of inputs
 no = size(C,1);% number of outputs
 Ts = 0.001;    % step size
 Tfinal = 0.5;  % final time
-
 wx = [1000 1]; % relative importance of states
 wu = 0.00001;  % penalizing weights of control inputs
-
-
 % generating simple step reference of the form [0.5 ; 0] 
 ref =0.5*[ones(1,Tfinal/Ts +np);zeros(1,Tfinal/Ts +np)];
-
-
 % model is anonymous function that represents the equation which describes 
 % system dynamic model and in the form of dx/dt =f(x,u). 
 model = @(x,u) nonlin_eq(x,u); 
-
 % FOR MPC CONTROLLER
-
 rr = zeros(np*nx,1);
 y  = zeros(no,Tfinal/Ts);
 uh = zeros(nu,Tfinal/Ts);
-
 %constraints for inputs in the whole horizon in the form of Acon*u <=Bcon
 [Acon,Bcon] = simple_constraints(umax,umin,np,nu);
 % weighting coefficient reflecting the relative importance of states and control inputs 
 Q = diag(repmat(wx, 1, np)); 
 R = diag(repmat(wu, 1, np));
-
 % Setting the quadprog with 200 iterations at maximum
 opts = optimoptions('quadprog', 'MaxIter', 200, 'Display','off');
-
 % MAIN SIMULATION LOOP
 for t=1:Tfinal/Ts
     
@@ -119,7 +105,6 @@ for t=1:Tfinal/Ts
     ui = u(1:nu);     %providing first solution as input to our system
     uh(:,t) = ui;     %storing input
 end
-
 % plotting the results
 tt = Ts:Ts:Tfinal;
 subplot(3,1,1)
