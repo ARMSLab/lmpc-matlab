@@ -124,3 +124,5 @@ title('u(t) vs t');
 Results
 
 ![figure 1](figure1.jpg)
+
+## How to cite
