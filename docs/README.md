@@ -53,14 +53,12 @@ Following MATLAB code shows how do we implement MPC controller:
 
 <pre>
 <code class="matlab">
-
 close all; clear; clc;
 
 % global parameters associated with dynamic model of the system 
 global g; g = 9.81;  
 global l; l = 0.1;  
 global b; b = 0.2;  
-
 % this is matrices to represent output as y=C*x+D*u
 C = eye(2);  
 D = [0;0];
@@ -90,32 +88,20 @@ ref =0.5*[ones(1,Tfinal/Ts +np);zeros(1,Tfinal/Ts +np)];
 
 
 % model is anonymous function that represents the equation which describes 
-% system dynamic model and in the form of dx/dt =f(x,u).
-% In order to make simulation of an arbitrary nonlinear system 
-% you should _CREATE_YOUR_OWN_ nonlin_eq(x,u) function that calculates dx/dt 
+% system dynamic model and in the form of dx/dt =f(x,u). 
 model = @(x,u) nonlin_eq(x,u); 
 
 % FOR MPC CONTROLLER
 
-%initialization of a vector for elements of reference values of
-%states for horizon length 
 rr = zeros(np*nx,1);
 y  = zeros(no,Tfinal/Ts);
 uh = zeros(nu,Tfinal/Ts);
 
 %constraints for inputs in the whole horizon in the form of Acon*u <=Bcon
 [Acon,Bcon] = simple_constraints(umax,umin,np,nu);
-% weighting coefficient reflecting the relative importance of states  
-% ! relative importance of states shown in vector [1000 1],where 1000 is
-% asociated with state1 and 1 with state2 respectively
-% !! In general, values of matrices Q and R should be tuned in order to
-% achieve satisfactory performance. You can vary values relative to each other
-% to observe the difference on the output and influence of such values. 
+% weighting coefficient reflecting the relative importance of states and control inputs 
 Q = diag(repmat(wx, 1, np)); 
 R = diag(repmat(wu, 1, np));
-
-
-
 
 % Setting the quadprog with 200 iterations at maximum
 opts = optimoptions('quadprog', 'MaxIter', 200, 'Display','off');
@@ -126,10 +112,7 @@ for t=1:Tfinal/Ts
     rr =  ref_for_hor(rr,ref,t,np,nx);% reference vector for whole horizon  
     y(:,t) = C*x+D*ui;                % evaluating system output 
     [x, dx] = RK4(x,ui,Ts,model);     % i.e. simulate one step forward with Runge-Kutta 4 order integrator
-    
-    % linearize_model() function _SHOULD_BE_MODIFIED_ according to your model
     [A, B, K] = linearize_model(x,dx,ui);                           % linearization step
-
     [Ad,Bd,Kd] = discretize(A,B,K,Ts);                              % discretization step
     [G, f] = grad_n_hess(R, Q, Ad, Bd, C, D, Kd, rr, np, x);        % calculating Hessian and gradient of cost function
     u = quadprog(G, f, Acon, Bcon, [], [], [], [], [],opts);
