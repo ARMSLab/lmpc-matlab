@@ -38,7 +38,7 @@ In order to solve this problem MATLAB built-in quadprog() function is used. Plea
 In fact, any nonlinear optimization problem solver can be used to come up with a solution. For example, qpOASES is suitable for real-time operation of robotic systems.
 
 ## Diagram of how LMPC controller works 
-![figure 1](figure2.jpg)
+![figure 1](figure2.gif)
 ## Tutorial objectives
 This tutorial covers implementation of basic parts of SLMPC controller. They are:
 1. Linearization of model 
