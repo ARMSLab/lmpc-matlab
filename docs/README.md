@@ -14,7 +14,7 @@ MathJax.Hub.Config({
 
 # Tutorial on Linearized MPC controller
 
-This is tutorial of Linearized MPC controller for nonlinear system. In this tutorial basic parts of Linearized MPC controller would be examined. This script shows how to implement controller for nonlinear system provided by equation $\frac{dx}{dt} = f(x,u)$ and $y=Cx+Du$. For details of derivation please refer to  Zhakatayev, Altay, et al. "[Successive linearization based model predictive control of variable stiffness actuated robots.](http://ieeexplore.ieee.org/document/8014275/)" IEEE AIM 2017
+This tutorial covers implementation of basic parts of SLMPC controller. This script shows how to implement controller for nonlinear system provided by equation $\frac{dx}{dt} = f(x,u)$ and $y=Cx+Du$. For details of derivation please refer to  Zhakatayev, Altay, et al. "[Successive linearization based model predictive control of variable stiffness actuated robots.](http://ieeexplore.ieee.org/document/8014275/)" IEEE AIM 2017
 
 ## Problem statement
 MPC controller requires several parameters:
@@ -37,11 +37,13 @@ $$ x(k+1) = f(x(k),u(k))$$
 In order to solve this problem MATLAB built-in quadprog() function is used. Please refer to documentation of quadprog() function for details.
 In fact, any nonlinear optimization problem solver can be used to come up with a solution. For example, qpOASES is suitable for real-time operation of robotic systems.
 
+## Diagram of how LMPC controller works 
+![figure 1](figure2.jpg)
 ## Tutorial objectives
-This tutorial covers implementation of basic parts of MPC controller. They are:
+This tutorial covers implementation of basic parts of SLMPC controller. They are:
 1. Linearization of model 
 2. Discretization of linearized model
-3. solving MPC controller optimiation problem with simple constraints
+3. solving Linearized MPC controller optimiation problem with simple constraints
 
 We setup out tutorial on simple mathematical pendulum, with equation of motion:
 
@@ -123,6 +125,6 @@ title('u(t) vs t');
 
 Results
 
-![figure 1](figure1.jpg)
+![figure 2](figure1.jpg)
 
 ## How to cite
