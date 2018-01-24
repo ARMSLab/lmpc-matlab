@@ -128,4 +128,4 @@ Results
 ![figure 2](figure1.jpg)
 
 ## How to cite
- <script src="https://bibbase.org/show?bib=http://armslab.github.io/lmpc-matlab/assets/citation.bib&jsonp=1"></script> 
+ <script src="https://bibbase.org/show?bib=http://armslab.github.io/lmpc-matlab/assets/citation.bib&jsonp=1&theme=bullets"></script> 
