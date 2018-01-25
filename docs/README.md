@@ -34,7 +34,7 @@ $$ X = [x(1),x(2),...,x(np)]^T $$
 
 $$ x(k+1) = f(x(k),u(k))$$
 
-In order to solve this problem MATLAB built-in quadprog() function is used. Please refer to documentation of quadprog() function for details.
+In order to solve this problem MATLAB built-in `quadprog()` function is used. Please refer to documentation of `quadprog()`  [function for details](https://www.mathworks.com/help/optim/ug/quadprog.html?requestedDomain=true).
 In fact, any nonlinear optimization problem solver can be used to come up with a solution. For example, qpOASES is suitable for real-time operation of robotic systems.
 
 ## Diagram of how LMPC controller works 
