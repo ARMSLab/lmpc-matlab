@@ -4,6 +4,6 @@ github:
   tar_url: https://github.com/ARMSLab/lmpc-matlab/archive/v0.1.tar.gz
   
 site:
-  name: SLMPC page
+  title: SLMPC page
 
 theme: jekyll-theme-cayman
