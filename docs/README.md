@@ -127,4 +127,7 @@ title('u(t) vs t');
 
 ![figure 2](figure1.png)
 
-## How to cite
+## Citation
+If you use our code please we kindly ask to cite the following paper:
+
+<script src="https://bibbase.org/show?bib=https://armslab.github.io/lmpc-matlab/assets/citation.bib&jsonp=1&css=0"></script> 
