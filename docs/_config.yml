@@ -6,3 +6,5 @@ github:
 title: SLMPC page
 
 remote_theme: alexcarpenter/material-jekyll-theme
+
+theme: jekyll-theme-architect
