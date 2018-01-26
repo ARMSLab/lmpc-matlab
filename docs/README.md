@@ -123,7 +123,7 @@ title('u(t) vs t');
 </code>
 </pre>
 
-Results
+### Results
 
 ![figure 2](figure1.png)
 
