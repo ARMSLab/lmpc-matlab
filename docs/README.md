@@ -41,8 +41,8 @@ In fact, any nonlinear optimization problem solver can be used to come up with a
 ![figure 1](figure2.gif)
 ## Tutorial objectives
 This tutorial covers implementation of basic parts of SLMPC controller. They are:
-1. Linearization of model 
-2. Discretization of linearized model
+1. [Linearization of model](https://en.wikipedia.org/wiki/Linearization) 
+2. [Discretization of linearized model](https://en.wikipedia.org/wiki/Discretization)
 3. solving Linearized MPC controller optimiation problem with simple constraints
 
 We setup out tutorial on simple mathematical pendulum, with equation of motion:
