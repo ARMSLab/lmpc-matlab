@@ -128,4 +128,4 @@ title('u(t) vs t');
 ![figure 2](figure1.png)
 
 ## How to cite
- <script src="https://bibbase.org/show?bib=https://armslab.github.io/lmpc-matlab/assets/citation.bib&jsonp=1&css="></script> 
+ <script src="https://bibbase.org/show?bib=https://armslab.github.io/lmpc-matlab/assets/citation.bib&jsonp=1&css=''"></script> 
