@@ -24,7 +24,7 @@ MPC controller requires several parameters:
 
 Model Predictive Control scheme can be formulated as an optimization problem with horizon length $$np$$:
  
-$$ \min\limits_{ u } J = \frac{1}{2}(X-rr)^TQ(X-rr) + \frac{1}{2}u^TRu = \frac{1}{2}u^TGu + f^Tu + C $$
+$$ \min\limits_{ u } J = \frac{1}{2}(X-rr)^TQ(X-rr) + \frac{1}{2}u^TRu = \frac{1}{2}u^TGu + f^Tu + Constant $$
 
 subject to:
 
