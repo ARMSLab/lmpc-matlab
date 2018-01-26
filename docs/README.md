@@ -134,3 +134,4 @@ If you use our code please we kindly ask to cite the following paper:
 <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/b81606e85986fa8ad0eb66954493bc1c0b3d7ab1/src/bibtex_js.js"></script>
 <bibtex src="https://armslab.github.io/lmpc-matlab/assets/citation.bib"></bibtex>
 
+<div id="bibtex_display"></div>
