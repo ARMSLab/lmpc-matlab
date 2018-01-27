@@ -17,7 +17,7 @@ MathJax.Hub.Config({
 This tutorial covers implementation of basic parts of SLMPC controller. This script shows how to implement controller for nonlinear system provided by equation 
 
 \begin{align}
-\frac{dx}{dt} &= f(x,u)\\
+\frac{dx}{dt} &= f(x,u) \newline
 y&=Cx+Du
 \end{align}
 . For details of derivation please refer to  Zhakatayev, Altay, et al. "[Successive linearization based model predictive control of variable stiffness actuated robots.](http://ieeexplore.ieee.org/document/8014275/)" IEEE AIM 2017
