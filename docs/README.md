@@ -15,12 +15,12 @@ MathJax.Hub.Config({
 # Tutorial on Linearized MPC controller
 
 This tutorial covers implementation of basic parts of SLMPC controller. This script shows how to implement controller for nonlinear system provided by equation 
-$$
+
 \begin{align}
 \frac{dx}{dt} &= f(x,u)\\
 y&=Cx+Du
 \end{align}
-$$. For details of derivation please refer to  Zhakatayev, Altay, et al. "[Successive linearization based model predictive control of variable stiffness actuated robots.](http://ieeexplore.ieee.org/document/8014275/)" IEEE AIM 2017
+. For details of derivation please refer to  Zhakatayev, Altay, et al. "[Successive linearization based model predictive control of variable stiffness actuated robots.](http://ieeexplore.ieee.org/document/8014275/)" IEEE AIM 2017
 
 ## Problem statement
 MPC controller requires several parameters:
