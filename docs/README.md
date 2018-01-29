@@ -14,7 +14,7 @@ MathJax.Hub.Config({
 
 # Tutorial on Linearized MPC controller
 
-This tutorial covers implementation of basic parts of SLMPC controller. This script shows how to implement controller for nonlinear system provided by equation 
+This tutorial covers implementation of basic parts of successive linearization based model predictive controller. This script shows how to implement controller for nonlinear system provided by equation 
 
 \begin{align}
 \dot{x} &= f(x,u) \newline
