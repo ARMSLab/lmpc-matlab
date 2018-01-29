@@ -106,7 +106,7 @@ for t=1:Tfinal/Ts
     rr =  ref_for_hor(rr,ref,t,np,nx);% reference vector for whole horizon  
     y(:,t) = C*x+D*ui;                % evaluating system output 
     [x, dx] = RK4(x,ui,Ts,model);     % i.e. simulate one step forward with Runge-Kutta 4 order integrator
-    [A, B, K] = linearize_model(x,dx,ui);                           % linearization step
+    [A, B, K] = <a href="">linearize_model</a>(x,dx,ui);                           % linearization step
     [Ad,Bd,Kd] = discretize(A,B,K,Ts);                              % discretization step
     [G, f] = grad_n_hess(R, Q, Ad, Bd, C, D, Kd, rr, np, x);        % calculating Hessian and gradient of cost function
     u = quadprog(G, f, Acon, Bcon, [], [], [], [], [],opts);
