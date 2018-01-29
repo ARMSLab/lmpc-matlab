@@ -20,7 +20,7 @@ This tutorial covers implementation of basic parts of successive linearization b
 \dot{x} &= f(x,u) \newline
 y&=Cx+Du
 \end{align}
-. For details of derivation please refer to  Zhakatayev, Altay, et al. "[Successive linearization based model predictive control of variable stiffness actuated robots.](http://ieeexplore.ieee.org/document/8014275/)" IEEE AIM 2017
+. For details of derivation please refer to  Zhakatayev, Altay, et al. "[Successive linearization based model predictive control of variable stiffness actuated robots.](## Citation)" IEEE AIM 2017
 
 ## Problem statement
 MPC controller requires several parameters:
@@ -130,7 +130,7 @@ title('u(t) vs t');
 </pre>
 
 ### Results
-
+In figure below, results of above code is shown. x1 and x2 are states of system described in [tutorial objectives](## Tutorial objectives). The red dashed lines reprents desired reference for each state. The u(t) represents solution of MPC controller. 
 ![figure 2](figure1.png)
 
 ## Citation
