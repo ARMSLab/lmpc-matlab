@@ -63,9 +63,9 @@ Following MATLAB code shows how do we implement MPC controller:
 <code class="matlab">
 close all; clear; clc;
 % global parameters associated with dynamic model of the system 
-global g; g = 9.81;  
-global l; l = 0.1;  
-global b; b = 0.2;  
+sys.g = 9.81;
+sys.l = 0.1;
+sys.b = 0.2;
 % this is matrices to represent output as y=C*x+D*u
 C = eye(2);  
 D = [0;0];
@@ -88,13 +88,13 @@ wu = 0.00001;  % penalizing weights of control inputs
 ref =0.5*[ones(1,Tfinal/Ts +np);zeros(1,Tfinal/Ts +np)];
 % model is anonymous function that represents the equation which describes 
 % system dynamic model and in the form of dx/dt =f(x,u). 
-model = @(x,u) nonlin_eq(x,u); 
+model = @(x,u) <a href="https://github.com/ARMSLab/slmpc/blob/master/nonlin_eq.m">nonlin_eq</a>(x,u,sys); 
 % FOR MPC CONTROLLER
 rr = zeros(np*nx,1);
 y  = zeros(no,Tfinal/Ts);
 uh = zeros(nu,Tfinal/Ts);
 %constraints for inputs in the whole horizon in the form of Acon*u <=Bcon
-[Acon,Bcon] = simple_constraints(umax,umin,np,nu);
+[Acon,Bcon] = <a href = "https://github.com/ARMSLab/slmpc/blob/master/simple_constraints.m">simple_constraints</a>(umax,umin,np,nu);
 % weighting coefficient reflecting the relative importance of states and control inputs 
 Q = diag(repmat(wx, 1, np)); 
 R = diag(repmat(wu, 1, np));
@@ -103,12 +103,12 @@ opts = optimoptions('quadprog', 'MaxIter', 200, 'Display','off');
 % MAIN SIMULATION LOOP
 for t=1:Tfinal/Ts
     
-    rr =  ref_for_hor(rr,ref,t,np,nx);% reference vector for whole horizon  
+    rr = <a href="https://github.com/ARMSLab/slmpc/blob/master/ref_for_hor.m"> ref_for_hor</a>(rr,ref,t,np,nx);% reference vector for whole horizon  
     y(:,t) = C*x+D*ui;                % evaluating system output 
     [x, dx] = RK4(x,ui,Ts,model);     % i.e. simulate one step forward with Runge-Kutta 4 order integrator
-    [A, B, K] = <a href="">linearize_model</a>(x,dx,ui);                           % linearization step
-    [Ad,Bd,Kd] = discretize(A,B,K,Ts);                              % discretization step
-    [G, f] = grad_n_hess(R, Q, Ad, Bd, C, D, Kd, rr, np, x);        % calculating Hessian and gradient of cost function
+    [A, B, K] = <a href="https://github.com/ARMSLab/slmpc/blob/master/linearize_model.m">linearize_model</a>(x,dx,ui,sys);                           % linearization step
+    [Ad,Bd,Kd] = <a href= "https://github.com/ARMSLab/slmpc/blob/master/discretize.m">discretize</a>(A,B,K,Ts);                              % discretization step
+    [G, f] = <a href = "https://github.com/ARMSLab/slmpc/blob/master/grad_n_hess.m">grad_n_hess</a>(R, Q, Ad, Bd, C, D, Kd, rr, np, x);        % calculating Hessian and gradient of cost function
     u = quadprog(G, f, Acon, Bcon, [], [], [], [], [],opts);
     ui = u(1:nu);     %providing first solution as input to our system
     uh(:,t) = ui;     %storing input
