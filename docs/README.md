@@ -57,7 +57,9 @@ $$\frac{\partial x_1}{\partial t} = x_2 $$
 
 $$\frac{\partial x_2}{\partial t} = -\frac{g}{l} sin(x_1) -b*x_2 + u $$
 
+<p align="center">
 ![pendulum](pendulum.png)
+  </p>
 
 Following MATLAB code shows how do we implement MPC controller:
 
