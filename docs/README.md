@@ -1,3 +1,5 @@
+<link rel="icon"  type="image/png"    href="icon.png">
+
 <link rel="stylesheet" href="/lmpc-matlab/assets/scripts/styles/default.css">
 <script src="/lmpc-matlab/assets/scripts/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
