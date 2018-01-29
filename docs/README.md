@@ -137,9 +137,10 @@ In figure below, results of above code is shown. x1 and x2 are states of system 
 
 ## Citation
 If you use our code please we kindly ask to cite the following paper:
-
+<script src="https://bibbase.org/show?bib=https://armslab.github.io/lmpc-matlab/assets/citation.bib&jsonp=1&css=0"></script> 
+<!--
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/b81606e85986fa8ad0eb66954493bc1c0b3d7ab1/src/bibtex_js.js"></script>
 <bibtex src="https://armslab.github.io/lmpc-matlab/assets/citation.bib"></bibtex>
-
 <div id="bibtex_display"></div>
+-->
