@@ -139,4 +139,4 @@ In figure below, results of above code is shown. x1 and x2 are states of system 
 
 ## Citation
 If you use our code we kindly ask to cite the following paper:
-<script src="https://bibbase.org/show?bib=https://armslab.github.io/lmpc-matlab/assets/citation.bib&jsonp=1&css=https://armslab.github.io/lmpc-matlab/assets/citation.bib"></script> 
+<script src="https://bibbase.org/show?bib=https://armslab.github.io/lmpc-matlab/assets/citation.bib&jsonp=1&css=/lmpc-matlab/assets/citation.bib"></script> 
