@@ -3,6 +3,6 @@ github:
   zip_url: https://github.com/ARMSLab/lmpc-matlab/archive/v0.1.zip
   tar_url: https://github.com/ARMSLab/lmpc-matlab/archive/v0.1.tar.gz
   
-title: Successive Linearization Based Model Predictive Control page
+title: Successive Linearization Based Model Predictive Control
 
 theme: jekyll-theme-cayman
