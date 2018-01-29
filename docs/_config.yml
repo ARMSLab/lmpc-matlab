@@ -4,6 +4,6 @@ github:
   tar_url: https://github.com/ARMSLab/slmpc/archive/v1.0.tar.gz
 
 title: Successive Linearization Based Model Predictive Control
-description: Test
+description: ARMS Laboratory, arms.nu.edu.kz
 
 theme: jekyll-theme-cayman
