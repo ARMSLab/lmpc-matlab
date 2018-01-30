@@ -27,7 +27,9 @@ For details of derivation and background information, please refer to  Zhakataye
 MPC controller requires several parameters:
 
 `np` - horizon length (number of time steps in the prediction horizon)
+
 `Q`  - a weight matrix representing relative importance of states (also we use vector 'wx')
+
 `R`  - a weight matrix penalizing large values of control inputs ( vector 'wu')
 
 The general Model Predictive Control (MPC) can be formulated as an optimization problem with horizon length $$np$$:
