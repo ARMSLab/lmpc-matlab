@@ -143,4 +143,23 @@ In figure below, results for the above code are shown. x1 and x2 are states of s
 
 ## Citation
 If you use our code we kindly ask to cite the following paper:
-<script src="https://bibbase.org/show?bib=https://armslab.github.io/lmpc-matlab/assets/citation.bib&jsonp=1&css=https://armslab.github.io/lmpc-matlab/assets/citation.bib"></script> 
+<table>
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="zhakatayev2017successive">1</a>]
+</td>
+<td class="bibtexitem">
+A.&nbsp;Zhakatayev, B.&nbsp;Rakhim, O.&nbsp;Adiyatov, A.&nbsp;Baimyshev, and H.&nbsp;A. Varol,
+  &ldquo;Successive linearization based model predictive control of variable
+  stiffness actuated robots,&rdquo; in <em>2017 IEEE International Conference on
+  Advanced Intelligent Mechatronics (AIM)</em>, July 2017, pp. 1774--1779.
+[&nbsp;<a href="/lmpc-matlab/assets/citation.bib">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.1109/AIM.2017.8014275">DOI</a>&nbsp;|&nbsp;<a href="http://arms.nu.edu.kz/sites/default/files/zhakatayev2017successive.pdf">PDF</a>&nbsp;]
+<blockquote><font size="-1">
+Keywords: actuators;control system synthesis;discrete time systems;energy conservation;linearisation techniques;mean square error methods;nonlinear control systems;predictive control;quadratic programming;robot dynamics;trajectory control;NMPC;SLMPC;VSA robots;control horizon;design paradigm;discrete-time linear model;energy efficient robots;linear representation;nonlinear model predictive control;quadratic problem;robot control;robot dynamics;root-mean-square errors;safety features;successive linearization based model predictive control;trajectory tracking experiment;variable stiffness actuated robots;Computational modeling;Cost function;Mathematical model;Nonlinear systems;Predictive control;Robots;Vehicle dynamics
+</font></blockquote>
+
+</td>
+</tr>
+</table>
