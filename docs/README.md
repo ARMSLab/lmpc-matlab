@@ -14,21 +14,23 @@ MathJax.Hub.Config({
 
 # Tutorial on Linearized MPC controller
 
-This tutorial covers implementation of basic parts of successive linearization based model predictive controller. This script shows how to implement controller for nonlinear system provided by equation 
+This is a tutorial on the implementation of successive linearization based model predictive control in Matlab. This script shows how to implement the controller for a nonlinear system described by the differential equation 
 
 \begin{align}
 \dot{x} &= f(x,u) \newline
 y&=Cx+Du
 \end{align}
-For details of derivation please refer to  Zhakatayev, Altay, et al. "[Successive linearization based model predictive control of variable stiffness actuated robots.]( #citation)" IEEE AIM 2017
+
+For details of derivation and background information, please refer to  Zhakatayey et al. "[Successive linearization based model predictive control of variable stiffness actuated robots.]( #citation)".
 
 ## Problem statement
 MPC controller requires several parameters:
-`np` - horizon length
-`Q`  - matrix representing relative importance of states (also we use vector 'wx')
-`R`  - matrix representing penalizing large values in control inputs ( vector 'wu')
 
-Model Predictive Control scheme can be formulated as an optimization problem with horizon length $$np$$:
+`np` - horizon length (number of time steps in the prediction horizon)
+`Q`  - a weight matrix representing relative importance of states (also we use vector 'wx')
+`R`  - a weight matrix penalizing large values of control inputs ( vector 'wu')
+
+The general Model Predictive Control (MPC) can be formulated as an optimization problem with horizon length $$np$$:
  
 $$ \min\limits_{ u } J = \frac{1}{2}(X-rr)^TQ(X-rr) + \frac{1}{2}u^TRu = \frac{1}{2}u^TGu + f^Tu + Constant $$
 
@@ -40,18 +42,18 @@ $$ X = [x(1),x(2),...,x(np)]^T $$
 
 $$ x(k+1) = f(x(k),u(k))$$
 
-In order to solve this problem MATLAB built-in `quadprog()` function is used. Please refer to documentation of `quadprog()`  [function for details](https://www.mathworks.com/help/optim/ug/quadprog.html?requestedDomain=true).
-In fact, any nonlinear optimization problem solver can be used to come up with a solution. For example, qpOASES is suitable for real-time operation of robotic systems.
+In order to solve this problem, we can use the built-in quadratic programmer `quadprog()` in Matlab. Please refer to  the documentation of `quadprog()`  [function for details] (https://www.mathworks.com/help/optim/ug/quadprog.html?requestedDomain=true).
+In fact, any nonlinear optimization problem solver can be used to solve this problem. For example, qpOASES is suitable for real-time operation of control systems thanks to its ability to find solutions quickly.
 
-## Diagram of how LMPC controller works 
+## Block Diagram of the Successive Linearization Model Predictive Controller
 ![figure 1](figure2.gif)
 ## Tutorial objectives
-This tutorial covers implementation of basic parts of SLMPC controller. They are:
+This tutorial covers basic implementation of the SLMPC controller. This consists of:
 1. [Linearization of model](https://en.wikipedia.org/wiki/Linearization) 
 2. [Discretization of linearized model](https://en.wikipedia.org/wiki/Discretization)
-3. solving Linearized MPC controller optimiation problem with simple constraints
+3. Solving SL=MPC optimization problem with simple constraints
 
-We setup out tutorial on simple mathematical pendulum, with equation of motion:
+In this tutorial, we use a simple pendulum for the test case with the equation of motion:
 
 $$\frac{\partial x_1}{\partial t} = x_2 $$ 
 
@@ -61,7 +63,7 @@ $$\frac{\partial x_2}{\partial t} = -\frac{g}{l} sin(x_1) -b*x_2 + u $$
 <img src="/lmpc-matlab/pendulum.png" alt="pendulum" />
 </div>
 
-Following MATLAB code shows how do we implement MPC controller:
+Following MATLAB code shows our implementation:
 
 <pre>
 <code class="matlab">
@@ -134,7 +136,7 @@ title('u(t) vs t');
 </pre>
 
 ### Results
-In figure below, results of above code is shown. x1 and x2 are states of system described in [tutorial objectives]( #tutorial-objectives). The red dashed lines reprents desired reference for each state. The u(t) represents solution of MPC controller. 
+In figure below, results forthe above code are shown. x1 and x2 are states of system described in [tutorial objectives]( #tutorial-objectives). The red dashed lines represent the desired reference for each state. The u(t) represents solution of MPC controller. 
 ![figure 2](figure1.png)
 
 ## Citation
