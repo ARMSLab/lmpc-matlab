@@ -136,7 +136,7 @@ title('u(t) vs t');
 </pre>
 
 ### Results
-In figure below, results forthe above code are shown. x1 and x2 are states of system described in [tutorial objectives]( #tutorial-objectives). The red dashed lines represent the desired reference for each state. The u(t) represents solution of MPC controller. 
+In figure below, results for the above code are shown. x1 and x2 are states of system described in [tutorial objectives]( #tutorial-objectives). The red dashed lines represent the desired reference for each state. The u(t) represents solution of MPC controller. 
 ![figure 2](figure1.png)
 
 ## Citation
