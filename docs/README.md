@@ -44,7 +44,7 @@ $$ X = [x(1),x(2),...,x(np)]^T $$
 
 $$ x(k+1) = f(x(k),u(k))$$
 
-In order to solve this problem, we can use the built-in quadratic programmer `quadprog()` in Matlab. Please refer to  the documentation of `quadprog()`  [function for details] (https://www.mathworks.com/help/optim/ug/quadprog.html?requestedDomain=true).
+In order to solve this problem, we can use the built-in quadratic programmer `quadprog()` in Matlab. Please refer to  the documentation of `quadprog()` [function for details](https://www.mathworks.com/help/optim/ug/quadprog.html?requestedDomain=true).
 In fact, any nonlinear optimization problem solver can be used to solve this problem. For example, qpOASES is suitable for real-time operation of control systems thanks to its ability to find solutions quickly.
 
 ## Block Diagram of the Successive Linearization Model Predictive Controller
