@@ -160,5 +160,9 @@ A.&nbsp;Zhakatayev, B.&nbsp;Rakhim, O.&nbsp;Adiyatov, A.&nbsp;Baimyshev, and H.&
 </tr>
 </table>
 
-## Cotacts 
-This tutorial is a pert of VSA 
+## Supplemental Information
+This tutorial is a part of VSA project at (ARMS Lab)[http://arms.nu.edu.kz/]
+
+If you spot a typo in the tutorial or bug in the source code, please contact us
+Bexultan Rakhim (bexultan.rakhim [at] nu.edu.kz )
+Olzhas Adiyatov (oadiyatov [at] nu.edu.kz )
