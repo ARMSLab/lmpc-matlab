@@ -163,8 +163,8 @@ A.&nbsp;Zhakatayev, B.&nbsp;Rakhim, O.&nbsp;Adiyatov, A.&nbsp;Baimyshev, and H.&
 ## Supplemental Information
 This tutorial is a part of VSA project at (ARMS Lab)[http://arms.nu.edu.kz/]
 
-If you spot a typo in the tutorial or bug in the source code, please contact us
+If you spot a typo in the tutorial or bug in the source code, please contact us via email: <br/>
+Bexultan Rakhim (bexultan.rakhim [at] nu.edu.kz )<br/>
+Olzhas Adiyatov (oadiyatov [at] nu.edu.kz )<br/>
 
-Bexultan Rakhim (bexultan.rakhim [at] nu.edu.kz )
-
-Olzhas Adiyatov (oadiyatov [at] nu.edu.kz )
+or (file an issue)[https://github.com/ARMSLab/slmpc/issues/new] through GitHub.
